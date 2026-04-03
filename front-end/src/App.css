@@ -53,36 +53,25 @@
     font-family: 'Poppins', sans-serif;
 }
 
-.login-button { 
-    background-color: #267394;
-    border: none;
-    padding: 10px 25px;
-    border-radius: 155px;
-    cursor: pointer;
-    color: white; 
-    font-size: 15px;
-    font-weight: bold;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
-}
-
-.login-button:hover { 
-    background-color: #2b98c4;
-}
-
 /* body_top */  
 
 .display_images { 
-    margin-top: 7vh; 
-    height: 80vh;
+    margin-top: 0.01vh; 
+    height: 93vh;
+    width: 100%;
 
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-
-    display: flex;
-    justify-content: center;
-    align-items: end;
     position: relative;
+    overflow: hidden;
+}
+
+.background-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    display: block;
 }
 
 .play {
@@ -93,21 +82,43 @@
     display: flex;
     gap: 20px;
     transition: opacity 0.5s ease;
+    align-items: center;
+    z-index: 2;
 }
 
-.play img { 
-    height: 50px;
-    width: auto;
+.control_button {
+    width: 56px;
+    height: 56px;
+    border: 0;
+    border-radius: 14px;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
+    padding: 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+    transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
-.pause_button { 
-    height: 50px;
-    width: auto;
-    cursor: pointer;
-    background-color: transparent;
-    border: none;
-    border-radius: 0%;
+.control_button:hover {
+    transform: translateY(-1px);
+    background: rgba(0, 0, 0, 0.85);
+}
+
+.control_button img {
+    width: 26px;
+    height: 26px;
+    object-fit: contain;
+    display: block;
+    filter: brightness(0) invert(1);
+}
+
+.pause_button img {
+    width: 24px;
+    height: 24px;
 }
 
 

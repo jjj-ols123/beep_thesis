@@ -21,7 +21,8 @@ function Body_Top() {
     const [show, setShow] = useState(true);
     const [isActive, setIsActive] = useState(false);
     const [showControls, setShowControls] = useState(false);
-    const ref = useRef(null);
+    const containerRef = useRef(null);
+    const imageRef = useRef(null);
 
 
     useEffect(() => {
@@ -62,33 +63,35 @@ function Body_Top() {
     }
 
     return (
-        <CSSTransition
-            in={show}
-            timeout={1000}
-            classNames="fade-out"
-            unmountOnExit
-            nodeRef={ref}
-        >
-            <main>
-                <div className='display_images'
-                    style={{
-                        backgroundImage: `url(${images[currentIndex]})`,
-                    }}
-                    ref={ref}
-                    onMouseEnter={() => setShowControls(true)}
-                    onMouseLeave={() => setShowControls(false)}
-                    >
+        <main>
+            <div className='display_images'
+                ref={containerRef}
+                onMouseEnter={() => setShowControls(true)}
+                onMouseLeave={() => setShowControls(false)}
+                >
+                <CSSTransition
+                    in={show}
+                    timeout={1000}
+                    classNames="fade-out"
+                    unmountOnExit
+                    nodeRef={imageRef}
+                >
+                    <img ref={imageRef} src={images[currentIndex]} alt="background" className="background-img" />
+                </CSSTransition>
 
-                    <div className={`play ${showControls ? 'visible' : 'hidden'}`}>
-                        <img src={left_arrow} alt="Left Arrow" className='arrow_button' onClick={() => handleArrowClick('left')} />
-                    <button> 
-                            <img src={isActive ? resume : pause} alt="Pause" className='pause_button' onClick={handlePauseClick} />
+                <div className={`play ${showControls ? 'visible' : 'hidden'}`}>
+                    <button type="button" className="control_button arrow_button" onClick={() => handleArrowClick('left')} aria-label="Previous slide">
+                        <img src={left_arrow} alt="" />
                     </button>
-                        <img src={right_arrow} alt="Right Arrow" className='arrow_button' onClick={() => handleArrowClick('right')} />
-                    </div>
+                    <button type="button" className="control_button pause_button" onClick={handlePauseClick} aria-label={isActive ? 'Resume slideshow' : 'Pause slideshow'}>
+                        <img src={isActive ? resume : pause} alt="" />
+                    </button>
+                    <button type="button" className="control_button arrow_button" onClick={() => handleArrowClick('right')} aria-label="Next slide">
+                        <img src={right_arrow} alt="" />
+                    </button>
                 </div>
-            </main>
-        </CSSTransition>
+            </div>
+        </main>
     )
 
 
