@@ -1,8 +1,8 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 
-import background1 from '../assets/body1.jpg';
-import background2 from '../assets/body2.jpg';
-import background3 from '../assets/body3.png';
+import background1 from '../assets/beep1.png';
+import background2 from '../assets/beep2.png';
+import background3 from '../assets/beep3.png';
 
 import left_arrow from '../assets/left_arrow.png';
 import right_arrow from '../assets/right_arrow.png';
