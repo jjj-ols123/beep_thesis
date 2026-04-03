@@ -2,6 +2,7 @@ import img1 from '../assets/1.png'
 import img2 from '../assets/2.png'
 import img3 from '../assets/3.png'
 import img4 from '../assets/4.png'
+import { forwardRef } from 'react'
 
 function Squares( {title, description, image}) { 
     return(
@@ -13,9 +14,9 @@ function Squares( {title, description, image}) {
     )
 }
 
-function Body_Mid() { 
+const Body_Mid = forwardRef((props, ref) => { 
     return(
-        <main className='body_mid'> 
+        <main ref={ref} className='body_mid'> 
             <div className='container'>
                 {stiMeaning.map((item, index) => (
                     <Squares key={index} image={item.image} title={item.title} description={item.description} />
@@ -23,7 +24,7 @@ function Body_Mid() {
             </div>
         </main>
     )
-}
+})
 
 export default Body_Mid;
 

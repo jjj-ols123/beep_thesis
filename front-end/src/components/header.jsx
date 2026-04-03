@@ -1,8 +1,13 @@
-import logo from '../assets/train-logo.png';
-import LoginForm from './loginform';
+import logo from '../assets/train-logo.png'; 
 
+function Header({ servicesRef }) { 
 
-function Header() { 
+    const scrollToSection = (elementRef) => {
+        window.scrollTo({
+            top: elementRef.current.offsetTop,
+            behavior: 'smooth'
+        });
+    }
 
     return (
         <>
@@ -16,7 +21,7 @@ function Header() {
 
             <div className='right_nav'>
             <ul className='nav-links'>
-                <li><a href="" className="header_text">Services</a></li>
+                <li><a onClick={() => scrollToSection(servicesRef)} className="header_text">Services</a></li>
                 <li><a href="" className="header_text">About Us</a></li>
                 <li><a href="" className="header_text">Contacts</a></li>
                 <li><a href="" className="header_text">FAQ</a></li>
