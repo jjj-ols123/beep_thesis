@@ -71,6 +71,7 @@
 /* body_top */  
 
 .display_images { 
+    margin-top: 7vh; 
     height: 80vh;
 
     background-size: cover;
@@ -233,7 +234,7 @@
 /* body_last */
 
 .background { 
-    background-size: cover;
+    background-size: auto 100%;
     background-position: center;
     background-repeat: no-repeat;
     height: 350px;
