@@ -151,6 +151,13 @@
 
 /* body_mid */
 
+#services_header { 
+    text-align: center;
+    font-size: 50px;
+    font-family: 'Poppins', sans-serif;
+    padding-top: 2rem;
+}
+
 
 .container { 
     display: flex;
@@ -326,7 +333,19 @@
     width: 150px;
 }
 
+.application_container { 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+}
 
+.application_choices { 
+    width: 30%;
+    height: 35rem;  
+    background-color: black;
+    border-radius: 15px;
+}
 
 
 

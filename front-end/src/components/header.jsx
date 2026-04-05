@@ -53,7 +53,7 @@ function Header({ servicesRef }) {
 
             <div className='right_nav'>
             <ul className='nav-links'>
-                <li><a href="#services" onClick={(event) => scrollToSection(event, servicesRef)} className="header_text">Services</a></li>
+                <li><a href="#services" onClick={(event) => scrollToSection(event, servicesRef)} className="header_text">Apply Now!</a></li>
                 <li><a href="" className="header_text">About Us</a></li>
                 <li><a href="" className="header_text">Contacts</a></li>
                 <li><a href="" className="header_text">FAQ</a></li>
