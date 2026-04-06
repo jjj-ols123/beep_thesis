@@ -62,6 +62,9 @@
 
     position: relative;
     overflow: hidden;
+
+    border-bottom: #0c3057;
+    border-bottom-style: solid;
 }
 
 .background-img {
@@ -285,67 +288,59 @@
 }
 
 
-/* login form */
-
-.form-overlay { 
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.5);
-
+.body_mid_container { 
     display: flex;
     justify-content: center;
-    align-items: start;
-    
-    padding-top: 4%;
-    z-index: 9999;
-}
-
-.form { 
-    background: white;
-    padding: 20px;
-    border-radius: 20px;
-    width: 30%;
-    height: 25%;
-
-}
-
-.loginform { 
-    display: flex;
+    align-items: center;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    
-}
-
-.loginform h2 { 
-    color: black;
-    font-family: 'Poppins', sans-serif;
-}
-
-.loginform button { 
-    margin-top: 20px;
-}
-
-.input { 
-    width: 150px;
-}
-
-.application_container { 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    gap: 3rem;
     padding: 2rem;
 }
 
 .application_choices { 
-    width: 30%;
-    height: 35rem;  
-    background-color: black;
-    border-radius: 15px;
+    width: 80%;
+    justify-content: center;
+    min-height: 2rem;  
+    box-sizing: border-box;
+    display: flex;
 }
+
+.application_items { 
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    width: 100%;
+}
+
+.application_button { 
+    flex: 1;
+}
+
+.application_button button { 
+    width: 100%;
+    flex: 1;
+    padding: 1rem 1.25rem;
+    border: 1px solid #0c3057;
+    background: #f2f5f8;
+    color: black;
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.application_button button:active{ 
+    background-color: #2355d0;
+    color: white;
+}
+
+.application_sections { 
+    width: 80%;
+    height: 35rem;
+    border-color: #0c3057;
+    border-width: 1px;
+    border-style: solid;
+}
+
 
 
 
