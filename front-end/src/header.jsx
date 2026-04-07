@@ -1,4 +1,4 @@
-import logo from '../assets/train-logo.png'; 
+import logo from './assets/train-logo.png'; 
 
 function Header({ servicesRef }) { 
 

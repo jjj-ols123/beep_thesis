@@ -322,7 +322,6 @@
     color: black;
     font-family: 'Poppins', sans-serif;
     font-size: 18px;
-    cursor: pointer;
     display: flex;
     align-items: center;
     gap: 0.9rem;
@@ -403,11 +402,21 @@
     align-items: center;
 }
 
-.drag-area subtitle { 
+.drag-area-title { 
     display: block;
     margin-top: 1rem;
     color: #999;
-    font-size: 14px;
+    font-size: 18px;
+}
+
+.drag-area.dragging {
+    border-color: #007bff;
+    background-color: #f0f8ff;
+    color: #007bff;
+}
+
+.drag-area.dragging .drag-area-title {
+    color: #007bff;
 }
 
 .empty-step-panel {

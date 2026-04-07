@@ -1,6 +1,6 @@
 import './App.css'
 import { useRef } from 'react'
-import Header from './components/header.jsx'
+import Header from './header.jsx'
 import Body_Top from './components/body_top.jsx'
 import Body_Mid from './components/body_mid.jsx'
 import Body_Bottom from './components/body_bottom.jsx'
