@@ -138,7 +138,7 @@ const applicationItems = [
 const stepContent = {
     1: {
         title: "Applicant's Information",
-        description: 'Complete the details to schedule your card processing',
+        description: 'Complete the details to schedule your card processing.',
     },
     2: {
         title: 'Date, Time, Location',
