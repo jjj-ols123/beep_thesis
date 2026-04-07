@@ -31,14 +31,14 @@ const Body_Mid = forwardRef((props, ref) => {
                     <p>{currentStep.description}</p>
 
                     {activeStep === 1 && (
-                        <>
+                        <div>
                             <h2>Full Name</h2>
                             <input type="text" placeholder='e.g. Juan Dela Cruz' />
                             <h2>Upload Student ID / COR</h2>
                             <div className='drag-area'>
                                 <span>Click or drag photo of ID here</span>
                             </div>
-                        </>
+                        </div>
                     )}
 
                     {activeStep === 2 && (
@@ -51,12 +51,28 @@ const Body_Mid = forwardRef((props, ref) => {
                         </div>
                     )}
                 </div>
+                <div className={`next_button_container ${activeStep === 1 ? 'single_button' : ''}`}>
+                    {activeStep > 1 && (
+                        <button className='step_button' id='previous_button'>{buttonText[2].text}</button>
+                    )}
+                    {activeStep < 3 ? (
+                        <button className='step_button' id='next_button'>{buttonText[0].text}</button>
+                    ) : (
+                        <button className='step_button' id='submit_button'>{buttonText[1].text}</button>
+                    )}
+                </div>
             </div>
         </main>
     )
 })
 
 export default Body_Mid;
+
+const buttonText = [
+    { text: 'Next' },
+    { text: 'Submit' },
+    { text: 'Previous' },
+]
 
 const applicationItems = [
     { step: 1, title: "Applicant's Information" },
